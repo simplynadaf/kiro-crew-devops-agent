@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "aws-devops-agent": {
+      "command": "uvx",
+      "timeout": 120000,
+      "args": [
+        "mcp-proxy-for-aws@latest",
+        "https://connect.aidevops.us-east-1.api.aws/mcp",
+        "--service", "aidevops",
+        "--region", "us-east-1"
+      ],
+      "description": "AWS DevOps Agent via SigV4 (uses ~/.aws/credentials)",
+      "disabled": false
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "description": "Safety deny patterns to prevent the agent from executing destructive commands. The agent can investigate and write code, but cannot deploy or modify production directly.",
+  "deny_patterns": [
+    "kubectl apply",
+    "kubectl delete",
+    "aws deploy create-deployment",
+    "terraform apply",
+    "terraform destroy",
+    "aws ecs update-service",
+    "aws ecs delete-service",
+    "aws lambda update-function-code",
+    "aws lambda delete-function",
+    "aws cloudformation execute-change-set",
+    "aws cloudformation delete-stack",
+    "aws s3 rm",
+    "aws s3 rb",
+    "aws rds delete-db-instance",
+    "aws ec2 terminate-instances",
+    "docker push",
+    "git push --force"
+  ]
+}

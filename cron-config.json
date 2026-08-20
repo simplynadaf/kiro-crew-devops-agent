@@ -1,0 +1,6 @@
+{
+  "name": "production-health-check",
+  "cron_expr": "*/30 * * * *",
+  "agent": "default",
+  "message": "Check production health via AWS DevOps Agent. Scan ECS, Lambda, CodeBuild, CodePipeline, and CloudWatch. Flag any issues found with severity and recommended fixes. If critical issues are detected, investigate root cause and propose specific CLI commands to fix them."
+}

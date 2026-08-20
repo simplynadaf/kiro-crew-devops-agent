@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "aws-devops-agent": {
+      "url": "https://connect.aidevops.us-east-1.api.aws/mcp",
+      "headers": {
+        "X-Agent-Space-Id": "YOUR_AGENT_SPACE_ID"
+      },
+      "description": "AWS DevOps Agent - 34 tools for health checks, investigations, and recommendations",
+      "disabled": false
+    }
+  }
+}
