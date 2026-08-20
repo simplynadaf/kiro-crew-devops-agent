@@ -22,12 +22,12 @@
 
 <p align="center">
   <a href="#-highlights">Highlights</a> •
-  <a href="#-architecture">Architecture</a> •
-  <a href="#-quick-start">Quick Start</a> •
-  <a href="#-34-tools-available">Tools</a> •
-  <a href="#-security-model">Security</a> •
-  <a href="#-demo-results">Demo</a> •
-  <a href="#-cost">Cost</a>
+  <a href="#architecture">Architecture</a> •
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#34-tools-available">Tools</a> •
+  <a href="#security-model">Security</a> •
+  <a href="#demo-results">Demo</a> •
+  <a href="#cost">Cost</a>
 </p>
 
 ---
@@ -77,7 +77,7 @@ Traditional monitoring only catches what you set alarms for. Everything else fai
 │   │ (*/30 * * *)│        │  (claude-sonnet) │                    │
 │   └─────────────┘        └────────┬─────────┘                    │
 │                                   │                               │
-│                      Spawns 5 parallel subagents                  │
+│                      Spawns parallel subagents                    │
 │                                   │                               │
 │          ┌────────────────────────┼────────────────────┐         │
 │          v            v           v          v         v         │
@@ -195,13 +195,24 @@ aws devops-agent create-access-token \
 
 ### Step 6: Add MCP Server to Kiro Crew
 
-```bash
-kirocrew config mcp add aws-devops-agent \
-  --url "https://connect.aidevops.us-east-1.api.aws/mcp" \
-  --header "X-Agent-Space-Id=YOUR_SPACE_ID"
+Add the DevOps Agent to your Kiro Crew MCP configuration. Open `~/.kiro/settings/mcp.json` and add the `aws-devops-agent` entry from `mcp-config.json` in this repo:
+
+```json
+{
+  "mcpServers": {
+    "aws-devops-agent": {
+      "url": "https://connect.aidevops.us-east-1.api.aws/mcp",
+      "headers": {
+        "X-Agent-Space-Id": "YOUR_SPACE_ID"
+      },
+      "description": "AWS DevOps Agent (34 tools)",
+      "disabled": false
+    }
+  }
+}
 ```
 
-Or add directly to `~/.kiro/settings/mcp.json` using `mcp-config.json` from this repo.
+You can also add this from the Crew Dashboard: **Agent Capabilities** > **Integrations (MCP)** > **Add**.
 
 ### Step 7: Add Cron Job
 
@@ -448,7 +459,7 @@ This is **Part 6** of the Kiro Crew series:
 <br/>
 Cloud Architect | 7x AWS Certified
 <br/>
-200+ Articles | 30K+ Followers
+200+ Articles | 15K+ Followers
 </td>
 <td>
 
