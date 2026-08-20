@@ -20,6 +20,20 @@
   <a href="https://www.linkedin.com/in/sarvar04/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin" alt="LinkedIn"/></a>
 </p>
 
+---
+
+<p align="center">
+  <a href="https://youtu.be/SPIIJ-dLN1E">
+    <img src="https://img.youtube.com/vi/SPIIJ-dLN1E/maxresdefault.jpg" alt="Watch the Demo" width="720"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://youtu.be/SPIIJ-dLN1E"><img src="https://img.shields.io/badge/▶_Watch_Full_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch on YouTube"/></a>
+</p>
+
+---
+
 <p align="center">
   <a href="#-highlights">Highlights</a> •
   <a href="#architecture">Architecture</a> •
